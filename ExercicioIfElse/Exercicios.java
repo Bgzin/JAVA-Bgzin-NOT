@@ -8,7 +8,7 @@ public class Exercicios {
  Scanner sc = new Scanner (System.in);
  
  public void exercicio1() {
-
+   
     System.out.println("Digite o Valor 1");
     int valor1 = sc.nextInt();
     System.out.println("Digite o Valor 2");
@@ -52,22 +52,19 @@ public class Exercicios {
 
 
  public void exercicio4() {
-   System.out.println("Quantas maças voce ira comprar?");
-   int quantidade = sc.nextInt();
-   double ValorDesconto= 0.0;
-   if(quantidade>=12);{
-      ValorDesconto = 0.0;}
-
-      else if (quantidade>=12);{
-      ValorDesconto = 0.25;
+   System.out.println("Quantidade de maças");
+        int quantidade = sc.nextInt();
+        double valorDesconto = 0.0;
+        if (quantidade == 0) {
+            valorDesconto = 0.0;
+        } else if (quantidade >= 12) {
+            valorDesconto = 0.25;
+        } else {
+            valorDesconto = 0.30;
+        }
+        double valorTotalDesconto = (quantidade * valorDesconto);
+        System.out.println("Valor da sua compra é" + valorTotalDesconto);  
       }
-      else {
-         ValorDesconto = 0.30;
-      }
-      double ValorTotalDesconto = (quantidade*ValorDesconto);
-      System.out.println("Valor da sua compra é" +ValorTotalDesconto);
-
-      }   
 
 
 
@@ -75,7 +72,30 @@ public class Exercicios {
 
 
 
- public void exercicio5() {
+ public void exercicio5()
+  {
+   System.out.println("Digite um Numero");
+   int PrimeiroNumero= sc.nextInt();
+   System.out.println("Digite um Numero");
+   int SegundoNumero= sc.nextInt();
+   System.out.println("Digite um Numero");
+   int TerceiroNumero= sc.nextInt();
+   int menor, medio, maior;
+   
+   
+   if (PrimeiroNumero<SegundoNumero && PrimeiroNumero < TerceiroNumero){
+      menor= PrimeiroNumero;
+   }
+   if (SegundoNumero<TerceiroNumero){
+      medio= SegundoNumero;
+      maior= TerceiroNumero;
+   }
+   
+
+   
+   
+
+
     
  }
 
