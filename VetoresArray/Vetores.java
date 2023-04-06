@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 import javax.sql.rowset.spi.SyncResolver;
 
-import org.jcp.xml.dsig.internal.SignerOutputStream;
+
 
 public class Vetores {
     Scanner sc=new Scanner(System.in);
@@ -81,6 +81,10 @@ public void exemplo4(){
     notas[3]= sc.nextDouble();
     double media= (notas[0]+notas[1]+notas[2]+notas[3]) /4;
     System.out.println("A media é"+media);
+
+}
+
+public void exercicio1(){
 
 }
 
