@@ -2,9 +2,9 @@ package iteracaoFor;
 
 public class App {
     public static void main(String[] args) {
-        ExemploFor obj= new ExemploFor();
+        Correcao obj= new Correcao();
        // obj.exemplo1();
-        obj.exemplo7();
+        obj.exercicio4ex();
     }
     
 }

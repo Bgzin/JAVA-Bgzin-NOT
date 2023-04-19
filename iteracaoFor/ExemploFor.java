@@ -78,10 +78,17 @@ System.out.println("o n° da iteração é "+i);}
 
       public void exemplo7(){
         int vetorNm[]= new int[5];
+       
         for (int i = 0; i < vetorNm.length; i++) {
-            System.out.println("Digite um algum valor inteiro "+(i+1)+":");
+            System.out.println("Digite um algum valor inteiro ");
             vetorNm[i]=sc.nextInt();
-            
+          
+            System.out.println("Numeros Guardados com sucesso");
         }
+
+      }
+
+      public void correcao(){
+        
       }
 }
