@@ -12,7 +12,7 @@ public class App {
         Pessoas pessoa01 = new Pessoas();
         Alunos aluno01= new Alunos();
         Funcionarios func01= new Funcionarios();
-        Professores professor01 = new Professores();
+        Professores professor01 = new Professores(); 
         aluno01.setNome("Roberval");
         aluno01.setIdade(17);
         aluno01.setEndereco("jardim periferico, 158");
