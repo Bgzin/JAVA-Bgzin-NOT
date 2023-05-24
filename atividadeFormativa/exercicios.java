@@ -66,6 +66,33 @@ System.out.println("Digite um valor válido");
     }
 
     public void exercicio3(){
-        int randal[] = new int[rd.nextInt(1000)];
+        //criar um vetor de tamanho de 100-100
+        int tamanhoVETOR = rd.nextInt(900)+100; 
+        int vetor[]= new int [tamanhoVETOR];
+        //preencher o vetor
+        for (int i = 0; i < vetor.length; i++) {
+           vetor[i]=rd.nextInt(100)+1; 
+        }
+        int contImparNoPar=0;
+        int contParNoImpar=0;
+        //imprimir os n pares do vetor
+        for (int i = 0; i < vetor.length; i++) {
+            if(vetor[i]%2==0){
+                System.out.println(vetor[i]);
+                if (i%2==0){
+                    contParNoImpar++;
+                }
+            }
+        }
+        for (int i = 0; i < vetor.length; i++) {
+            if(vetor[i]%2==1){
+                System.out.println(vetor[i]);
+                if (i%2==0){
+                    contImparNoPar++;
+                }
     }
+}
+
+
+}
 }
