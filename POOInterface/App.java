@@ -6,7 +6,7 @@ public class App {
         Retangulo figura2 = new Retangulo(4, 6);
         System.out.println("Nome: "+figura2.getNomeFigura()
                                 +"\nArea; " +figura2.getArea()
-                               +"\nPerimetro; " +figura2.getPerimetro());
+                               +"\nPerimetro: " +figura2.getPerimetro());
        System.out.println("-------------------------------");
         
         System.out.println("Nome: "+figura1.getNomeFigura()
