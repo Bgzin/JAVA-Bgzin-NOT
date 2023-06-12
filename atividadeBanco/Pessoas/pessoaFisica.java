@@ -11,5 +11,13 @@ public class pessoaFisica  extends Pessoas{
         CPF = cPF;
     }
 
-    
+    @Override
+    public String toString() {
+       return "PessoaJuridica = {"
+           + this.getNomeConta() + "Nome: , "
+           + this.getNumeroConta() + "nConta: , "
+           + this.getCPF() + "CPF: , "
+           + this.getSaldoConta() + "Saldo R$: , "
+           + "}";
+   }  
 }

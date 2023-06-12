@@ -11,5 +11,13 @@ public void setCNPJ(String cNPJ) {
     CNPJ = cNPJ;
 }
  
- 
+ @Override
+ public String toString() {
+    return "PessoaJuridica = {"
+        + this.getNomeConta() + ", "
+        + this.getNumeroConta() + ", "
+        + this.getCNPJ() + ", "
+        + this.getSaldoConta() + ", "
+        + "}";
+}
 }
