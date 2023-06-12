@@ -2,7 +2,7 @@ package POOElevador;
 
 public class App {
     public static void main(String[] args) {
-        Elevador elevadoro1= new Elevador(0, 0);
+        elevador elevadoro1= new elevador(0, 0);
       boolean ligado = true;
       while(ligado){
         System.out.println("Informe a ação Desejada"

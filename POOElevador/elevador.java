@@ -2,7 +2,7 @@ package POOElevador;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
-public class Elevador {
+public class elevador {
     //atributos
     int qtdPessoasAtual;
     int qtdMaxPessoas;
@@ -10,7 +10,7 @@ public class Elevador {
     int andarAtual;
     //métodos
     //construtor
-    public Elevador(int qtdMaxPessoas, int nMaxAndares) {
+    public elevador(int qtdMaxPessoas, int nMaxAndares) {
         this.qtdMaxPessoas = qtdMaxPessoas;
         this.nMaxAndares = nMaxAndares;
     }

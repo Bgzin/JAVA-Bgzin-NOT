@@ -12,15 +12,14 @@ public class App {
     pessoaFisica fisica01    =  new pessoaFisica();
     pessoaJuridica juridica01 = new pessoaJuridica();
 
+    
     System.out.println("Primeiro vamos criar sua conta");
-    System.out.println("Voce é pessoa Juridica ou Fisica?");
-    String pergunta=sc.nextLine();
-        
- 
-    System.out.println("------------------------------");
-    pessoa01.setNomeConta("Rogerin Bg");
-    pessoa01.setNumeroConta("001389");
-    pessoa01.setSaldoConta("R$ 370,00");
+    System.out.println("Voce é pessoa Juridica(1) ou Fisica(2)?");
+    int pergunta=sc.nextInt();
+    if(pergunta==1){
+    System.out.println("Seja muito bem vindo ao nosso Registro digite seus dados abaixo");
+    }
+    
     
     }
 }
