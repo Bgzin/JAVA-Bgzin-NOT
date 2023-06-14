@@ -21,17 +21,21 @@ public class App {
       while (ligado) {
          System.out.println("Informe a ação Desejada"
                + "\n1-Registrar-se"
-               + "\n2-Consultar"
-               + "\n3-Sair");
+               + "\n2-Consultar conta Juridica"
+               + "\n3-Consultar conta Fisica"
+               + "\n4-Sair");
          int acao = sc.nextInt();
          switch (acao) {
             case 1:
                Registro(sc);
                break;
             case 2:
-               Consulte(sc);
+               // ConsultePJ(sc);
                break;
             case 3:
+               
+               break;
+               case 4:
                ligado = false;
                break;
 
@@ -46,35 +50,62 @@ public class App {
       System.out.println("Seja bem-vindo ao nosso Register!");
       System.out.println("Voce é pessoa Juridica(1) ou Fisica(2)?");
       int pergunta = sc.nextInt();
+      int contaPJ = 0;
       if (pergunta == 1) {
          pessoaJuridica RegistrosJuridico[] = new pessoaJuridica[2];
-         for (int i = 0; i < RegistrosJuridico.length; i++) {
-            //
-            RegistrosJuridico[i] = new pessoaJuridica();
-            // preencher os dados do cliente
-            RegistrosJuridico[i].setNomeConta(JOptionPane.showInputDialog("Nome: "));
-            RegistrosJuridico[i].setNumeroConta(JOptionPane.showInputDialog("Numero da Conta: "));
-            RegistrosJuridico[i].setCNPJ(JOptionPane.showInputDialog("CNPJ: "));
-            RegistrosJuridico[i].setSaldoConta(JOptionPane.showInputDialog("Deposito Inicial R$: "));
-            System.out.println("Pessoa Juridica: " + RegistrosJuridico[i].toString());
-         }
+         RegistrosJuridico[contaPJ] = new pessoaJuridica();
+         // preencher os dados do cliente
+         RegistrosJuridico[contaPJ].setNomeConta(JOptionPane.showInputDialog("Nome da Empresa: "));
+         RegistrosJuridico[contaPJ].setNumeroConta(JOptionPane.showInputDialog("Numero da Conta: "));
+         RegistrosJuridico[contaPJ].setCNPJ(JOptionPane.showInputDialog("CNPJ: "));
+         RegistrosJuridico[contaPJ].setSaldoConta(0);
+         System.out.println("Pessoa Juridica: " + RegistrosJuridico[contaPJ].toString());
+
       } else if (pergunta == 2) {
+         int contaPF = 0;
          pessoaFisica RegistrosFisica[] = new pessoaFisica[2];
-         for (int i = 0; i < RegistrosFisica.length; i++) {
-            //
-            RegistrosFisica[i] = new pessoaFisica();
-            // preencher os dados do cliente
-            RegistrosFisica[i].setNomeConta(JOptionPane.showInputDialog("Nome: "));
-            RegistrosFisica[i].setNumeroConta(JOptionPane.showInputDialog("Numero da Conta: "));
-            RegistrosFisica[i].setCPF(JOptionPane.showInputDialog("CPF: "));
-            RegistrosFisica[i].setSaldoConta(JOptionPane.showInputDialog("Deposito Inicial R$: "));
-            System.out.println("Pessoa Juridica: " + RegistrosFisica[i].toString());
-         }
+         RegistrosFisica[contaPF] = new pessoaFisica();
+         // preencher os dados do cliente
+         RegistrosFisica[contaPF].setNomeConta(JOptionPane.showInputDialog("Nome: "));
+         RegistrosFisica[contaPF].setNumeroConta(JOptionPane.showInputDialog("Numero da Conta: "));
+         RegistrosFisica[contaPF].setCPF(JOptionPane.showInputDialog("CPF: "));
+         RegistrosFisica[contaPF].setSaldoConta(0);
+         System.out.println("Pessoa Juridica: " + RegistrosFisica[contaPF].toString());
       }
+
    }
 
-   public static void Consulte(Scanner sc) {
-      System.out.println("Essa aba é especialmente para Consultar dados, Prossiga com as seguintes opões");
+   public static void ConsultePJ(Scanner sc) {
+      System.out.println("Essa aba é especialmente para Consultar pessoas Juridicas, Prossiga com as seguintes opões");
+      boolean consultandoPJ = true;
+      while (consultandoPJ) {
+         System.out.println("Informe a ação Desejada"
+            + "\n1-Verificar Saldo"
+            + "\n2-Saque"
+            + "\n3-Depósito;"
+            + "\n4-Empréstimo;"
+            + "\n5-Sair");
+
+         int acao = sc.nextInt();
+         switch (acao) {
+            case 1:
+            System.out.println("Seu saldo é de R$: "+pessoaJuridica.getSaldoConta());
+               break;
+            case 2:
+               
+               break;
+            case 3:
+               break;
+            case 4:
+               break;
+            case 5:
+              consultandoPJ=false;
+               break;
+            default:
+               System.out.println("Opção Invalida");
+               break;
+         }
+      }
 
    }
 }

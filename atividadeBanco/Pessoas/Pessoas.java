@@ -5,7 +5,7 @@ public class Pessoas {
 
 String numeroConta;
 String nomeConta;
-String saldoConta;
+static int saldoConta;
 
 public String getNumeroConta() {
     return numeroConta;
@@ -19,10 +19,10 @@ public String getNomeConta() {
 public void setNomeConta(String nomeConta) {
     this.nomeConta = nomeConta;
 }
-public String getSaldoConta() {
+public static int  getSaldoConta() {
     return saldoConta;
 }
-public void setSaldoConta(String saldoConta) {
+public void setSaldoConta(int  saldoConta) {
     this.saldoConta = saldoConta;
 }
 
