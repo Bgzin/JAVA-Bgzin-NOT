@@ -6,6 +6,8 @@ public class ContaPJ extends Conta {
     String cnpj;
     double emprestimoPJ;
     double juros = 0.4;
+    double valorPagarPJ;
+    
 
     public String getCnpj() {
         return cnpj;
@@ -22,7 +24,12 @@ public class ContaPJ extends Conta {
     public void setEmprestimoPJ(double emprestimoPJ) {
         this.emprestimoPJ = emprestimoPJ;
     }
-
+ public double getValorPagarPJ() {
+        return valorPagarPJ;
+    }
+     public void setValorPagarPJ(double valorPagarPJ) {
+        this.valorPagarPJ = valorPagarPJ;
+    }
     public void emprestimoPJ() {
         emprestimoPJ = Integer.parseInt(JOptionPane.showInputDialog(
                 "Informe o valor de empréstimo desejado. Valor minimo de R$12.000,00 e valor máximo de R$150.000,00"));
