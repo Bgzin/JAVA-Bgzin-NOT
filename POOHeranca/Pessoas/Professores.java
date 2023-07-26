@@ -4,6 +4,7 @@ public class Professores extends Funcionarios {
    private String materia;
    private String bloco;
    private String Sala;
+   
 public String getMateria() {
     return materia;
 }
