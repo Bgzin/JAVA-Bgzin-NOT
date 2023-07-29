@@ -1,15 +1,15 @@
 package RevisaoFPOO.Cadastro;
 
 public class Cachorro extends Animal {
-    String RaçaD;
+    String RacaD;
     
 
 
     public String getRaçaD() {
-        return RaçaD;
+        return RacaD;
     }
     public void setRaçaD(String raça) {
-        RaçaD = raça;
+        RacaD = raça;
     }
     
     }

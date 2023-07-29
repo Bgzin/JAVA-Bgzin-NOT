@@ -2,15 +2,15 @@ package RevisaoFPOO.Cadastro;
 
 public class Gato  extends Animal{
    
-    String RaçaG;
+    String RacaG;
     String quantasVidasG;
 
 
     public String getRaça() {
-        return RaçaG;
+        return RacaG;
     }
-    public void setRaça(String raça) {
-        RaçaG = raça;
+    public void setRaça(String raca) {
+        RacaG = raca;
     }
     public String getQuantasVidas() {
         return quantasVidasG;
