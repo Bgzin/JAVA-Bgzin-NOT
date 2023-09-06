@@ -1,11 +1,13 @@
 import javax.swing.JFrame;
 import java.awt.*;
 
-public class BorderLayout {
+public class BorderLayoutExemplo {
     public static final Object CENTER = null;
     public static final Object NORTH = null;
+    public static final Object WEST = null;
+    public static final Object SOUTH = null;
 
-    public BorderLayout() {
+    public BorderLayoutExemplo() {
         super();
         //criando uma janela
         JFrame janela3 = new JFrame("Janela Principal");

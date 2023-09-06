@@ -11,23 +11,23 @@ public class Calculadora {
     public Calculadora() {
 
         JFrame janelac = new JFrame("Exemplo GridLayout");
-        BorderLayout border = new BorderLayout();
+        BorderLayoutExemplo border = new BorderLayoutExemplo();
         JPanel painelA = new JPanel();
         JPanel painel2 = new JPanel();//padrão FlowLayout
         GridLayout grid = new GridLayout(2, 2);
         painelA.setLayout((LayoutManager) border);
         //adicionar Jpanel ao Jframe
-        janelaA.getContentPane().add(painelA, BorderLayout.CENTER);
-        janelaA.getContentPane().add(painel2, BorderLayout.NORTH);
+        janelac.getContentPane().add(painelA, BorderLayoutExemplo.CENTER);
+        janelac.getContentPane().add(painel2, BorderLayoutExemplo.NORTH);
         //adicionando componentes
         painelA.add(new JButton("1"));
         painelA.add(new JButton("2"));
         painelA.add(new JButton("3"));
         painelA.add(new JButton("4"));
        //config janelaA
-       janelaA.setBounds(500, 500, 500, 500);
-       janelaA.setDefaultCloseOperation(2);
-       janelaA.setVisible(true);
+       janelac.setBounds(500, 500, 500, 500);
+       janelac.setDefaultCloseOperation(2);
+       janelac.setVisible(true);
     }
 }
 
