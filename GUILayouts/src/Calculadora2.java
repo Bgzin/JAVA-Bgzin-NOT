@@ -2,7 +2,6 @@ import java.awt.FlowLayout;
 import java.awt.Font;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
-import java.awt.GridLayout;
 import java.awt.Insets;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -15,31 +14,38 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class Calculadora2 extends JPanel {
+    JTextField textFieldHora;
+    JTextField textFieldMinuto;
+    JTextField textFieldSegundo;
+
     public Calculadora2() {
         super();
         this.setLayout(new GridBagLayout());
         GridBagConstraints gbc = new GridBagConstraints();
-        gbc.insets = new Insets(5, 5, 5, 5);
+        gbc.insets = new Insets(10, 10, 10, 10); // Aumentei o espaçamento
 
-        JLabel titleLabel = new JLabel("Convert. Hr's");
-        titleLabel.setFont(new Font("Arial", Font.BOLD, 24));
+        // Título
+        JLabel titleLabel = new JLabel("Conversor de Tempo");
+        titleLabel.setFont(new Font("Arial", Font.BOLD, 36)); // Aumentei o tamanho da fonte
         gbc.gridx = 0;
         gbc.gridy = 0;
         gbc.gridwidth = 2;
         this.add(titleLabel, gbc);
 
-        JPanel panel = new JPanel(new GridLayout(3, 2));
+        // Painel para os campos de entrada
+        JPanel panel = new JPanel();
+        panel.setLayout(new FlowLayout(FlowLayout.LEFT));
 
-        JTextField textFieldHora = new JTextField();
-        JTextField textFieldMinuto = new JTextField();
-        JTextField textFieldSegundo = new JTextField();
-        textFieldSegundo.setEditable(false);
+        textFieldHora = new JTextField(10); // Aumentei o tamanho dos campos
+        textFieldMinuto = new JTextField(10);
+        textFieldSegundo = new JTextField(10);
 
-        panel.add(new JLabel("aqui estão as Horas:"));
+        // Rótulos e campos de entrada
+        panel.add(new JLabel("Horas:"));
         panel.add(textFieldHora);
-        panel.add(new JLabel("aqui os Minutos:"));
+        panel.add(new JLabel("Minutos:"));
         panel.add(textFieldMinuto);
-        panel.add(new JLabel("e aqui os Segundos:"));
+        panel.add(new JLabel("Segundos:"));
         panel.add(textFieldSegundo);
 
         gbc.gridx = 0;
@@ -47,33 +53,50 @@ public class Calculadora2 extends JPanel {
         gbc.gridwidth = 2;
         this.add(panel, gbc);
 
+        // Painel para botões
         JPanel buttonPanel = new JPanel(new FlowLayout());
 
-        JButton converterButton = new JButton("Resolve");
-        converterButton.setFont(new Font("Arial", Font.PLAIN, 12));
-        converterButton.setIcon(new ImageIcon("icon_converter.png")); // Substitua "icon_converter.png" pelo caminho do seu ícone
+        // Botão de conversão
+        JButton converterButton = new JButton("Converter");
+        converterButton.setFont(new Font("Arial", Font.PLAIN, 18)); // Aumentei o tamanho da fonte
         converterButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 try {
-                    int horas = Integer.parseInt(textFieldHora.getText());
-                    int minutos = 0;
-                    if (!textFieldMinuto.getText().isEmpty()) {
-                        minutos = Integer.parseInt(textFieldMinuto.getText());
-                    }
-                    int totalMinutos = horas * 60 + minutos;
-                    int segundos = totalMinutos * 60;
+                    String horaStr = textFieldHora.getText();
+                    String minutoStr = textFieldMinuto.getText();
+                    String segundoStr = textFieldSegundo.getText();
+
+                    // Verifica se os campos estão vazios
+                    if (horaStr.isEmpty()) horaStr = "0";
+                    if (minutoStr.isEmpty()) minutoStr = "0";
+                    if (segundoStr.isEmpty()) segundoStr = "0";
+
+                    int horas = Integer.parseInt(horaStr);
+                    int minutos = Integer.parseInt(minutoStr);
+                    int segundos = Integer.parseInt(segundoStr);
+
+                    // Converter horas para minutos e somar aos minutos existentes
+                    int totalMinutos = (horas * 60) + minutos;
+
+                    // Converter minutos para segundos e somar aos segundos existentes
+                    int totalSegundos = (totalMinutos * 60) + segundos;
+
                     textFieldMinuto.setText(String.valueOf(totalMinutos));
-                    textFieldSegundo.setText(String.valueOf(segundos));
+                    textFieldSegundo.setText(String.valueOf(totalSegundos));
+
+                    // Limpa o campo de horas
+                    textFieldHora.setText("");
                 } catch (NumberFormatException ex) {
+                    textFieldHora.setText("Erro");
                     textFieldMinuto.setText("Erro");
                     textFieldSegundo.setText("Erro");
                 }
             }
         });
 
+        // Botão de limpar
         JButton limparButton = new JButton("Limpar");
-        limparButton.setFont(new Font("Arial", Font.PLAIN, 12));
-        limparButton.setIcon(new ImageIcon("icon_limpar.png")); // Substitua "icon_limpar.png" pelo caminho do seu ícone
+        limparButton.setFont(new Font("Arial", Font.PLAIN, 18)); // Aumentei o tamanho da fonte
         limparButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 textFieldHora.setText("");
@@ -97,6 +120,7 @@ public class Calculadora2 extends JPanel {
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.add(new Calculadora2());
                 frame.pack();
+                frame.setSize((int) (frame.getWidth() * 1.4), (int) (frame.getHeight() * 1.4)); // Aumentei o tamanho da janela
                 frame.setVisible(true);
             }
         });
