@@ -74,11 +74,10 @@ public class Calculadora2 extends JPanel {
                     int horas = Integer.parseInt(horaStr);
                     int minutos = Integer.parseInt(minutoStr);
                     int segundos = Integer.parseInt(segundoStr);
-
-                    // Converter horas para minutos e somar aos minutos existentes
+                    //converter horas para minutos 
                     int totalMinutos = (horas * 60) + minutos;
 
-                    // Converter minutos para segundos e somar aos segundos existentes
+                    // Converter minutos para segundos 
                     int totalSegundos = (totalMinutos * 60) + segundos;
 
                     textFieldMinuto.setText(String.valueOf(totalMinutos));
