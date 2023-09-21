@@ -1,18 +1,29 @@
-## Getting Started
+Relatio das Calculadoras:
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+os layouts utilizados foram:
+campo da primeira calculadora
+-
+-
+-
+-
+-
+-
 
-## Folder Structure
+o segundo foi de:
+campo segunda calculadora
+-
+-
+-
+-
+-
+-
 
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+e o terceiro foi a GridBagLayout:
+o motivo que eu utilizei o GridBagLayout foi a facilidade de redimensonamento, 
+a flexibilidade de Organização: O GridBagLayout é bem flexível e permite que os componentes
+da interface sejam organizados em uma grade personalizada.
+ele tambem tem uma adaptação a Diferentes telas e plataformas ele é uma boa escolha quando você deseja que sua 
+aplicação em diferentes monitores por que ele se adapta 
+às diferentes resoluções de tela e ambientes de sistema operacional
+Dificuldades nessa calculadora: A maior dificuldade mesmo foi tentar converter os segundos para minutos e horas, e tambem a indecisão dos layouts/design;
+Consegui tirar bastante duvidas com os meus colegas de grupos, juntamos ideias e gostamos do resultado final.
